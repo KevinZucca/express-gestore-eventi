@@ -3,3 +3,5 @@
 // const eventsController = require("../controllers/events");
 
 // router.get("/", eventsController.index);
+// router.post("/", eventsController.store);
+// router.put("/:event", eventsController.update);
