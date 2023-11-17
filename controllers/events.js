@@ -1,4 +1,7 @@
 const Model = require("../models/event");
+const fs = require("fs");
+const jsonEvents = require("../events.json");
+const path = require("path");
 
 function index(req, res) {
   const allEvents = Model.seeEvents(req.query);
@@ -27,7 +30,24 @@ function store(req, res) {
 }
 
 function update(req, res) {
-  res.json(Model);
+  let jsonEvents = require("../events.json");
+  const event = jsonEvents.find((el) => el.id == req.params.event);
+
+  if (req.body.title) {
+    event.title = req.body.title;
+  }
+  if (req.body.description) {
+    event.description = req.body.description;
+  }
+  if (req.body.date) {
+    event.date = req.body.date;
+  }
+  if (req.body.maxSeats) {
+    event.maxSeats = Number(req.body.maxSeats);
+  }
+  const newJson = JSON.stringify(jsonEvents, null, 2);
+  fs.writeFileSync(path.resolve(__dirname, "../", "events.json"), newJson);
+  res.json(event);
 }
 
 module.exports = {

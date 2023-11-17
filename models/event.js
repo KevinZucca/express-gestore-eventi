@@ -97,6 +97,10 @@ class Model {
     return finalJson;
   }
 
+  static getEvent(query) {
+    return event;
+  }
+
   static createID(id) {
     const jsonFile = require("../events.json");
     const idList = jsonFile.map((event) => event.id);
@@ -108,10 +112,15 @@ class Model {
 
   static filterResearch(query, array) {
     let response = [];
-    const { title, date, maxSeats } = query;
+    const { title, description, date, maxSeats } = query;
     if (title) {
       response = array.filter((event) =>
         event.title.toLowerCase().includes(title)
+      );
+    }
+    if (description) {
+      response = array.filter((event) =>
+        event.description.toLowerCase().includes(description)
       );
     }
     if (date) {
