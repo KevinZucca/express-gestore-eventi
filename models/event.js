@@ -10,8 +10,11 @@ class Model {
       (this.maxSeats = maxSeats);
   }
 
-  static seeEvents() {
-    const jsonFile = require("../events.json");
+  static seeEvents(query) {
+    let jsonFile = require("../events.json");
+    if (query && Object.keys(query).length > 0) {
+      jsonFile = this.filterResearch(query, jsonFile);
+    }
     return jsonFile;
   }
 
@@ -22,7 +25,9 @@ class Model {
   }
 
   static saveNewEvent(event) {
+    // create the new ID
     this.createID(event.id);
+    // write the new json file
     const jsonFile = require("../events.json");
     jsonFile.push(event);
     const newJsonFile = JSON.stringify(jsonFile, null, 2);
@@ -41,6 +46,29 @@ class Model {
     const newId = orderedIdList[0] + 1;
     id = newId;
     return id;
+  }
+
+  static filterResearch(query, array) {
+    let response = [];
+    const { title, date, maxSeats } = query;
+    if (title) {
+      response = array.filter((event) =>
+        event.title.toLowerCase().includes(title)
+      );
+    }
+    if (date) {
+      response = array.filter((event) => event.date === date);
+    }
+    if (maxSeats) {
+      response = array.filter((event) => event.maxSeats == maxSeats);
+    }
+    console.log(response);
+    return response;
+  }
+
+  static getReservations(event) {
+    const events = require("../events.json");
+    const reservations = require("../reservations.json");
   }
 }
 

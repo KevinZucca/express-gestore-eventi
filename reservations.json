@@ -1,0 +1,72 @@
+[
+    {
+        "id": 1,
+        "firstName": "John",
+        "lastName": "Doe",
+        "email": "john.doe@email.com",
+        "eventId": 1
+    },
+    {
+        "id": 2,
+        "firstName": "Jane",
+        "lastName": "Smith",
+        "email": "jane.smith@email.com",
+        "eventId": 2
+    },
+    {
+        "id": 3,
+        "firstName": "Alice",
+        "lastName": "Johnson",
+        "email": "alice.johnson@email.com",
+        "eventId": 1
+    },
+    {
+        "id": 4,
+        "firstName": "Bob",
+        "lastName": "Williams",
+        "email": "bob.williams@email.com",
+        "eventId": 3
+    },
+    {
+        "id": 5,
+        "firstName": "Eva",
+        "lastName": "Brown",
+        "email": "eva.brown@email.com",
+        "eventId": 2
+    },
+    {
+        "id": 6,
+        "firstName": "Charlie",
+        "lastName": "Davis",
+        "email": "charlie.davis@email.com",
+        "eventId": 1
+    },
+    {
+        "id": 7,
+        "firstName": "Grace",
+        "lastName": "Moore",
+        "email": "grace.moore@email.com",
+        "eventId": 3
+    },
+    {
+        "id": 8,
+        "firstName": "David",
+        "lastName": "Lee",
+        "email": "david.lee@email.com",
+        "eventId": 2
+    },
+    {
+        "id": 9,
+        "firstName": "Sophia",
+        "lastName": "Taylor",
+        "email": "sophia.taylor@email.com",
+        "eventId": 3
+    },
+    {
+        "id": 10,
+        "firstName": "Jack",
+        "lastName": "Wilson",
+        "email": "jack.wilson@email.com",
+        "eventId": 1
+    }
+]

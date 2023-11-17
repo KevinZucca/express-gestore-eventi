@@ -40,11 +40,5 @@
     "description": "Uno spettacolo teatrale con attori talentuosi e una trama avvincente.",
     "date": "2024-02-01",
     "maxSeats": 150
-  },
-  {
-    "id": 7,
-    "title": "Spettacolo",
-    "description": "è un evento",
-    "date": "2023-03-30"
   }
 ]
