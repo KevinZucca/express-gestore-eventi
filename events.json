@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "title": "Concerto Rock",
+    "description": "Un emozionante concerto di musica rock con artisti famosi.",
+    "date": "2023-12-15",
+    "maxSeats": 500
+  },
+  {
+    "id": 2,
+    "title": "Conferenza Tech",
+    "description": "Una conferenza tecnologica con esperti del settore.",
+    "date": "2023-11-30",
+    "maxSeats": 100
+  },
+  {
+    "id": 3,
+    "title": "Festa di Natale",
+    "description": "Celebrazione festiva con musica, cibo e divertimento per tutta la famiglia.",
+    "date": "2023-12-25",
+    "maxSeats": null
+  },
+  {
+    "id": 4,
+    "title": "Mostra d'Arte",
+    "description": "Una mostra che presenta opere d'arte di artisti locali e internazionali.",
+    "date": "2024-01-10",
+    "maxSeats": 200
+  },
+  {
+    "id": 5,
+    "title": "Evento Sportivo",
+    "description": "Un emozionante evento sportivo con partite e competizioni.",
+    "date": "2023-12-05",
+    "maxSeats": null
+  },
+  {
+    "id": 6,
+    "title": "Spettacolo Teatrale",
+    "description": "Uno spettacolo teatrale con attori talentuosi e una trama avvincente.",
+    "date": "2024-02-01",
+    "maxSeats": 150
+  },
+  {
+    "id": 7,
+    "title": "Spettacolo",
+    "description": "è un evento",
+    "date": "2023-03-30"
+  }
+]

@@ -4,6 +4,9 @@ const dotenv = require("dotenv").config();
 const port = process.env.PORT;
 const eventsRouter = require("./routers/events");
 
+// file config
+app.use(express.urlencoded({ extended: true }));
+
 // routes
 app.use("/events", eventsRouter);
 
