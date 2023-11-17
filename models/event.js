@@ -62,13 +62,16 @@ class Model {
     if (maxSeats) {
       response = array.filter((event) => event.maxSeats == maxSeats);
     }
-    console.log(response);
     return response;
   }
 
   static getReservations(event) {
-    const events = require("../events.json");
-    const reservations = require("../reservations.json");
+    const reservationsList = require("../reservations.json");
+    const reservations = reservationsList.filter((el) => el.eventId == event);
+    if (reservations.length == 0) {
+      throw new Error("Non ci sono prenotazioni per questo evento");
+    }
+    return reservations;
   }
 }
 

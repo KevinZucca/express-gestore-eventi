@@ -1,15 +1,16 @@
-const Reservation = require("../models/reservation");
+const Model = require("../models/event");
 
 function index(req, res) {
-  res.send("reservations");
+  const reservations = Model.getReservations(req.params.event);
+  res.json(reservations);
 }
 
 function store(req, res) {
-  res.send("reservations");
+  res.json("ok");
 }
 
 function destroy(req, res) {
-  res.send("reservations");
+  res.json("ok");
 }
 
 module.exports = {
